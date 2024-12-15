@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+    <!-- frame work links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" 
+    integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- file links  -->
+    <link rel="stylesheet" href="./css/main-login.css">
+    <link rel="stylesheet" href="./css/imges.css">
+    <link rel="stylesheet" href="./css/texts.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./js/inex.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>loginTaha</title>
+</head>
+<body class="bg-image" style="background-image:url(./images/background/mobileLogin.jpg)  ;">
+    <section>
+        <!-- head icon user -->
+        <div class="d-flex justify-content-center py-5 ">
+            <img src="./images/mainImages/user-login.png" class="" alt="">
+        </div>
+        <!-- main inputs -->
+        <div>
+            <!-- user and pass -->
+            <div class="p-4 d-flex align-items-start flex-column mb-3  ">
+                <!-- username -->
+                <div class="p-3 d-flex border-white border-2 btn col-12 border-none px-1 py-1 rounded-5 mb-5 justify-content-between" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                    <button class="btn " type="button" id="button-addon" ><img class="user-icon"  src="./images/input-icons/user.svg" alt=""></button>
+                    <input type="text" class="form-control btn   " placeholder="نام کاربری " aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <!-- password -->
+                <div class="p-3 d-flex border-white border-2 btn col-12  px-1 py-1 rounded-5 justify-content-between ">
+                    <img src="./images/input-icons/password.svg" class="px-3 " alt="">
+                    <input type="password" id="passwordId" class="form-control btn focus-ring focus-ring-primary " placeholder="رمز عبور" aria-label="Password" aria-describedby="basic-addon1">
+                    <button class="btn"  type="button" id="showPassword"> <img src="./images/input-icons/eyes-fill.svg"  alt=""> </button>
+                </div>
+            </div>
+            <!-- login button -->
+            <div class="p-4 d-flex align-items-end flex-column mb-3 py-5">
+                <button class="p-2 d-flex border-white border-2 btn col-12 border-none  rounded-5 mb-5 justify-content-center bg-white primery-text">
+                    ورود
+                </button>
+            </div>    
+        </div>
+        <!-- texts -->
+         <footer class="">
+            <div class="d-flex justify-content-between px-4">
+                <div class="text-white ">
+                    فراموشی رمز عبور
+                </div>
+                <div class="text-white ">
+                    تماس با ما 
+                </div>
+            </div>
+         </footer>
+        
+    </section>
+    <script>
+        const showPassword = document.querySelector('#showPassword');
+        const passwordId = document.querySelector('#passwordId');
+        showPassword.addEventListener("click", (e) => {
+            const type = passwordId.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordId.setAttribute('type', type);
+            e.target.classList.toggle('');
+        });
+
+    </script>
+
+    
+</body>
+</html>

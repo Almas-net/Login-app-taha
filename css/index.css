@@ -1,0 +1,8 @@
+input:focus-visible {
+    outline: 2px solid rgba(14, 203, 115, 0.723);
+    border-radius: 10px;
+  }
+
+button:active{
+    background-color: rgba(22, 196, 138, 0.853);
+}
